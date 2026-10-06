@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rebar-inverse"
+version = "0.1.0"
+description = "Planar cylinder reconstruction from instance masks"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2", "opencv-python>=4.10", "torch>=2.10",
+  "mitsuba==3.9.1", "drjit==1.5.0",
+]
+
+[project.scripts]
+rebar-reconstruct = "rebar_inverse.__main__:ReconstructionCommand.main"
+
+[tool.setuptools.packages.find]
+include = ["rebar_inverse*"]
+
+[tool.ruff]
+line-length = 80

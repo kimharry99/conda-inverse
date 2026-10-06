@@ -1,0 +1,16 @@
+name: rebar-inverse
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.10.0+cu128
+      - mitsuba==3.9.1
+      - drjit==1.5.0
+      - numpy==2.4.6
+      - scipy==1.17.1
+      - opencv-python==5.0.0.93
+      - matplotlib==3.11.2
